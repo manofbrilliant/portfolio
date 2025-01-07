@@ -1,0 +1,210 @@
+/* CSS for the Portfolio Page */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Background color of the preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it stays above all other elements */
+}
+
+#preloader img {
+    height: 150px; /* Adjust logo size */
+    animation: spin 2s linear infinite; /* Optional: Add a spin animation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@font-face {
+    font-family: 'CustomFont'; /* Choose a name for your font */
+    src: url('fonts/Product\ Sans\ Regular.ttf') format('truetype'); /* Path to your .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Heading'; /* Choose a name for your font */
+    src: url('fonts/PlaywriteAUSA-VariableFont_wght.ttf') format('truetype'); /* Path to your .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 6px; /* Adjusted for fixed navbar */
+}
+
+/* Navbar Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #333;
+    padding: 11px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+/* Fixed Navbar */
+nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Menu List */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: blue;
+}
+
+/* Logo */
+nav img {
+    height: 66px;
+    object-fit: contain;
+}
+
+nav h1{
+    margin-left: 866px;
+    font-family: 'Heading', sans-serif;
+    font-size: 20px; /* Adjust size as needed */
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden; /* Hides overflow if it exists */
+    text-overflow: ellipsis;
+}
+nav h1:hover{
+    color: #007bff;
+
+}
+/* Curved Box */
+.curved-box {
+    width: 1400px;
+    height: 2000px;
+    background-color: #f4f4f4;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.9;
+    padding: 2px;
+    margin: 50px auto;
+}
+/* Ensure only the `typing-effect` class gets the animation */
+
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Clean and professional font */
+    font-size: 2.5rem; /* Emphasized size */
+    font-weight: bold;
+    color: #333; /* Bold, neutral color */
+    text-align: center; /* Center aligns the title */
+    margin-bottom: 0; /* Remove extra spacing below the title */
+}     
+
+.para {
+    font-family: 'Verdana', sans-serif; /* Modern, clear font */
+    font-size: 1.2rem; /* Slightly smaller size than h1 */
+    color: #666; /* Subtle, complementary color */
+    text-align: center; /* Matches alignment with h1 */
+    margin-top: 0.5rem; /* Small space between title and tagline */
+    line-height: 1.4; /* Improves tagline readability */
+}
+
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+.curved-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 1599px;
+}
+
+.curved-box h1{
+    font-size: 66px;
+}
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

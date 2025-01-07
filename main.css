@@ -1,0 +1,472 @@
+/* CSS for the Portfolio Page */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Background color of the preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it stays above all other elements */
+}
+
+#preloader img {
+    height: 150px; /* Adjust logo size */
+    animation: spin 2s linear infinite; /* Optional: Add a spin animation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@font-face {
+    font-family: 'CustomFont'; /* Choose a name for your font */
+    src: url('fonts/Product\ Sans\ Regular.ttf') format('truetype'); /* Path to your .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Heading'; /* Choose a name for your font */
+    src: url('fonts/PlaywriteAUSA-VariableFont_wght.ttf') format('truetype'); /* Path to your .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 6px; /* Adjusted for fixed navbar */
+}
+
+/* Navbar Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #333;
+    padding: 11px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+/* Fixed Navbar */
+nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Menu List */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: blue;
+}
+
+/* Logo */
+nav img {
+    height: 66px;
+    object-fit: contain;
+}
+
+nav h1{
+    margin-left: 866px;
+    font-family: 'Heading', sans-serif;
+    font-size: 20px; /* Adjust size as needed */
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden; /* Hides overflow if it exists */
+    text-overflow: ellipsis;
+}
+nav h1:hover{
+    color: #007bff;
+
+}
+/* Curved Box */
+.curved-box {
+    width: 1400px;
+    height: 200px;
+    background-color: #f4f4f4;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.9;
+    padding: 2px;
+    margin: 50px auto;
+}
+
+.typing-effect {
+    display: inline-block;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 22px;
+    border-right: 2px solid black;
+    animation: typing 5s steps(60) 1s forwards, blink 0.75s step-end infinite;
+    font-family: 'CustomFont', sans-serif; /* Apply the custom font */
+}
+.typing-effect:hover{
+color: blue;
+
+}
+.curved-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    float: right;
+    margin-left: 20px;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Marquee */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-content img {
+    margin: 0 30px;
+    height: 66px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+#project{
+margin-left: 100px;
+    font-family: 'CustomFont', sans-serif; 
+    color: #7d7b88;
+}
+
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-header {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: normal;
+    text-align:left;
+    font-family: 'CustomFont', sans-serif; 
+  }
+  
+  .card-body {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .projects-container {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: space-around; /* Adds space between cards */
+    flex-wrap: wrap; /* Ensures cards wrap to the next row if there's not enough space */
+    gap: 20px; /* Adds spacing between the cards */
+    margin: 20px;
+}
+
+.card {
+    width: 30%; /* Adjust the width of each card */
+    background-color: #f8f9fa; /* Light background color */
+    border: 1px solid #dee2e6; /* Border for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+
+.about-me-section {
+    width: 100%; /* Ensure full width */
+    height: 200px;
+    background-image: url('img/aboutme.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+
+}
+
+.about-me-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+    color:white;
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3 parts for menus, 1 part for logo */
+    grid-gap: 30px;
+    padding: 40px;
+    background-color: #1f1f21;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between; /* Ensures the content is spread across */
+}
+
+.footer-menus {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns for the menus */
+    gap: 20px; /* Gap between menu columns */
+}
+
+.menu-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+    padding-bottom: 5px;
+}
+
+.menu-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-column li {
+    margin: 8px 0;
+}
+
+.menu-column a {
+    text-decoration: none;
+    color: #7d7b88;
+    transition: color 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.menu-column a:hover {
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.menu-column h3{
+   color:#c8c5d5;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-end; /* Align the logo to the right */
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 662px; /* Set a max width for the logo */
+    height: auto;
+}
+
+.footer-copyright {
+    grid-column: span 2; /* Ensures copyright takes full width */
+    text-align: center;
+    padding-top: 44px;
+    font-size:22;
+    font-family: 'CustomFont', sans-serif; /* Apply the custom font */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Full-width adjustment */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.social-media-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-icons svg {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons svg:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
